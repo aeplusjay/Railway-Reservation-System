@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div id="auth-container">
+        <label for="email">Email/Phone:</label>
+        <input type="text" id="email" placeholder="Enter email/phone">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="authenticate()">Login</button>
+    </div>
+
+    <div id="main-container" style="display:none;">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date">
+        <label for="source">Source:</label>
+        <input type="text" id="source" placeholder="Enter source">
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" placeholder="Enter destination">
+        <button onclick="searchTrains()">Search Trains</button>
+
+        <div id="train-list" style="display:none;">
+            <!-- Train list will be displayed here -->
+        </div>
+
+        <div id="passenger-details" style="display:none;">
+            <!-- Passenger details form will be displayed here -->
+        </div>
+
+        <button onclick="addPassenger()">Add Passenger</button>
+        <button onclick="submitBooking()">Submit Booking</button>
+    </div>
+
+    <div id="ticket-details" style="display:none;">
+        <!-- Ticket details will be displayed here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
